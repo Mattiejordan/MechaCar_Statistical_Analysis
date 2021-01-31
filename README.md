@@ -52,13 +52,13 @@ Does this linear model predict mpg of MechaCar prototypes effectively? Why or wh
 
 ### Deliverable 3
 
-Sample versus population means
+Sample t-test for all Manufacturing Lots versus population means
 ```
 	One Sample t-test
 
-data:  subset(Suspension_Coil, Manufacturing_Lot = "Lot1")$PSI
-t = -1.8931, df = 149, p-value = 0.06028
-alternative hypothesis: true mean is not equal to 1500
+data:  Suspension_Coil$PSI
+t = 0, df = 149, p-value = 1
+alternative hypothesis: true mean is not equal to 1498.78
 95 percent confidence interval:
  1497.507 1500.053
 sample estimates:
@@ -66,30 +66,44 @@ mean of x
   1498.78 
 ```
 
+Manufacturing Lot 1 vs mean PSI of the population
 ```
 	One Sample t-test
 
-data:  subset(Suspension_Coil, Manufacturing_Lot = "Lot2")$PSI
-t = -1.8931, df = 149, p-value = 0.06028
+data:  subset(Suspension_Coil, Manufacturing_Lot == "Lot1")$PSI
+t = 0, df = 49, p-value = 1
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
- 1497.507 1500.053
+ 1499.719 1500.281
 sample estimates:
 mean of x 
-  1498.78 
+     1500 
 ```
-
+Manufacturing Lot 2 vs mean PSI of the population
 ```
 	One Sample t-test
 
-data:  subset(Suspension_Coil, Manufacturing_Lot = "Lot3")$PSI
-t = -1.8931, df = 149, p-value = 0.06028
+data:  subset(Suspension_Coil, Manufacturing_Lot == "Lot2")$PSI
+t = 0.51745, df = 49, p-value = 0.6072
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
- 1497.507 1500.053
+ 1499.423 1500.977
 sample estimates:
 mean of x 
-  1498.78 
+   1500.2
+```
+Manufacturing Lot 3 vs mean PSI of the population
+```
+	One Sample t-test
+
+data:  subset(Suspension_Coil, Manufacturing_Lot == "Lot3")$PSI
+t = -2.0916, df = 49, p-value = 0.04168
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1492.431 1499.849
+sample estimates:
+mean of x 
+  1496.14 
 ```
 
 
