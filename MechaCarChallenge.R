@@ -29,16 +29,16 @@ SuspensionManLotsum <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>% summa
 t.test(Suspension_Coil$PSI,mu=as.numeric(SuspensionPSIsum[1:1])) #compare sample versus population means
 
 #Lot1
-t.test(subset(Suspension_Coil, Manufacturing_Lot = "Lot1")$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
+#t.test(subset(Suspension_Coil, Manufacturing_Lot = "Lot1")$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
+t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot1")$PSI,mu=1500)
 
 #Lot2
-t.test(subset(Suspension_Coil, Manufacturing_Lot = "Lot2")$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
+#t.test(subset(Suspension_Coil, Manufacturing_Lot = "Lot2")$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
+t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot2")$PSI,mu=1500)
 
 #Lot3
-t.test(subset(Suspension_Coil, Manufacturing_Lot = "Lot3")$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
-
-#Lot 3
-t.test(Suspension_Coil$PSI,mu=as.numeric(SuspensionPSIsum[1:1]), subset = as.numeric(SuspensionPSIsum[3,"Mean"]))
+#t.test(subset(Suspension_Coil, Manufacturing_Lot = "Lot3")$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
+t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot3")$PSI,mu=1500)
 
 #deliverable 4 stats
 #compare metrics vehicle weight to mpg
