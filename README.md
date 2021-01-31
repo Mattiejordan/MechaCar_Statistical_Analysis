@@ -1,5 +1,6 @@
 # MechaCar_Statistical_Analysis
 
+![mechaCarImage](mechaCarImage.jpg)
 
 ## Linear Regression to Predict MPG
 
@@ -115,5 +116,14 @@ mean of x
 ### Deliverable 4
 
 ## Study Design: MechaCar vs Competition
-
-
+```
+MechaCar mpg summary
+> MechaCarmpg_sum
+     Mean   Median Variance       SD
+1 45.1286 43.40039 242.4932 15.57219
+```
+By using the MechaCar Miles Per Gallon stats configured above I would next use the statistics of 
+the competitor car's mpg data as mu to compare in a t-test. My null hypothesis would proclaim that 
+the MechaCar mpg data is the same as the competitor's mpg data. The alternative hypothesis would 
+show there are significant differences between the MechaCar mpg and the competitor mpg. With significant 
+differene the null hypothesis would be rejected. 
