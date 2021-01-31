@@ -42,5 +42,20 @@ t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot3")$PSI,mu=1500)
 
 #deliverable 4 stats
 #compare metrics vehicle weight to mpg
-
+#How our Mecha car will compete with the competition
 aov
+
+#carlm_filt <- carlm[,c("vehicle_weight","mpg")] #filter columns from mtcars dataset
+#carlm_filt$mpg <- factor(carlm_filt$mpg) #convert numeric column to factor
+#aov(vehicle_weight ~ mpg,data=carlm_filt) #compare means across multiple levels
+#summary(aov(vehicle_weight ~ mpg,data=carlm_filt))
+#head(carlm_filt)
+
+#t-test of metric like mpg to variable 
+#t.test(Suspension_Coil$PSI,mu=as.numeric(SuspensionPSIsum[1:1]))
+MechaCarmpg_sum <- MechaCar_mpg %>% summarize(Mean=mean(mpg),Median=median(mpg),Variance=var(mpg),SD=sd(mpg))
+t.test(MechaCar_mpg$PSI,mu=as.numeric(MechaCarmpg_sum[1:1]))
+
+#t.test(subset(MechaCar_mpg, mpg =< "30")$PSI,mu=30)
+#find the mu from existing competition of their mpg to compare which test and which null and alternative hypotheses.
+#null would be same mpg as competetiion. Alternative hypotheses would show significant difference in MPG and would reject the null.
