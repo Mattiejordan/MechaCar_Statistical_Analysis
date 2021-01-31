@@ -56,9 +56,9 @@ Sample versus population means
 ```
 	One Sample t-test
 
-data:  Suspension_Coil$PSI
-t = 0, df = 149, p-value = 1
-alternative hypothesis: true mean is not equal to 1498.78
+data:  subset(Suspension_Coil, Manufacturing_Lot = "Lot1")$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
  1497.507 1500.053
 sample estimates:
@@ -66,6 +66,31 @@ mean of x
   1498.78 
 ```
 
+```
+	One Sample t-test
+
+data:  subset(Suspension_Coil, Manufacturing_Lot = "Lot2")$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+```
+
+```
+	One Sample t-test
+
+data:  subset(Suspension_Coil, Manufacturing_Lot = "Lot3")$PSI
+t = -1.8931, df = 149, p-value = 0.06028
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+```
 
 
 
