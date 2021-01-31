@@ -3,7 +3,7 @@
 
 ## Linear Regression to Predict MPG
 
-Deliverable 1
+### Deliverable 1
 ```
 Call:
 lm(formula = MechaCar_mpg)
@@ -32,10 +32,49 @@ Which variables/coefficients provided a non-random amount of variance to the mpg
 Is the slope of the linear model considered to be zero? Why or why not?
 Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
-Deliverable 2
+### Deliverable 2
 
 ```
 > Suspensiondata
      Mean Median Variance       SD
 1 1498.78   1500 62.29356 7.892627
 ```
+
+```
+> SuspensionManLotsum
+# A tibble: 3 x 5
+  Manufacturing_Lot  Mean Median Variance     SD
+* <chr>             <dbl>  <dbl>    <dbl>  <dbl>
+1 Lot1              1500   1500     0.980  0.990
+2 Lot2              1500.  1500     7.47   2.73 
+3 Lot3              1496.  1498.  170.    13.0  
+```
+
+### Deliverable 3
+
+Sample versus population means
+```
+	One Sample t-test
+
+data:  Suspension_Coil$PSI
+t = 0, df = 149, p-value = 1
+alternative hypothesis: true mean is not equal to 1498.78
+95 percent confidence interval:
+ 1497.507 1500.053
+sample estimates:
+mean of x 
+  1498.78 
+```
+
+
+
+
+
+
+
+
+### Deliverable 4
+
+## Study Design: MechaCar vs Competition
+
+
